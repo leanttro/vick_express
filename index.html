@@ -90,7 +90,7 @@
         }
 
         .icon-shape {
-            font-size: 400px; /* Tamanho dos ícones duplicado */
+            font-size: 800px; /* Tamanho dos ícones duplicado */
         }
         
         .icon-shape:nth-child(1) {
@@ -187,7 +187,7 @@
         
         /* Estilo para o logo e animação de pulso */
         .hero-logo {
-            width: clamp(200px, 50vw, 400px);
+            width: clamp(250px, 60vw, 500px);
             margin-bottom: 0.5rem; /* Diminuído o espaçamento */
             animation: fadeInUp 1s ease-out 0.4s both, pulse 2s infinite ease-in-out;
             position: relative;
@@ -205,6 +205,7 @@
             filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.8)); /* Sombra menor */
             animation: neon-pulse 3s infinite ease-in-out alternate;
             z-index: 3; /* Para ficar atrás do logo */
+            opacity: 0.2; /* Deixando o triângulo mais transparente */
         }
 
         .triangle-bg svg {
@@ -214,18 +215,16 @@
             stroke: #fff;
             stroke-width: 3; /* Mais fino */
         }
-
         @keyframes neon-pulse {
             0% {
-                transform: translate(-50%, -50%) rotate(0deg) scale(1);
-                opacity: 0.6;
+                transform: translate(-50%, -50%) rotate(0deg) scale(1) translateY(0);
+                opacity: 0.2;
             }
             100% {
-                transform: translate(-50%, -50%) rotate(360deg) scale(1.1);
-                opacity: 0.9;
+                transform: translate(-50%, -50%) rotate(360deg) scale(1.1) translateY(-150%);
+                opacity: 0.5;
             }
         }
-
         @keyframes pulse {
             0% {
                 transform: scale(1);
