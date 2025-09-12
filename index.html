@@ -168,14 +168,14 @@
 
         .hero-badge {
             display: inline-block;
-            padding: 0.5rem 1.5rem;
+            padding: 1rem 3rem; /* Aumentado */
             background: rgba(255, 255, 255, 0.1);
             backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.2);
             border-radius: 50px;
-            font-size: 0.875rem;
+            font-size: 1rem; /* Aumentado */
             font-weight: 500;
-            margin-bottom: 0.5rem; /* Diminuído o espaçamento */
+            margin-bottom: 1.5rem; /* Aumentado */
             animation: fadeInUp 1s ease-out 0.2s both;
         }
         
@@ -187,8 +187,8 @@
         
         /* Estilo para o logo e animação de pulso */
         .hero-logo {
-            width: clamp(250px, 60vw, 500px);
-            margin-bottom: 0.5rem; /* Diminuído o espaçamento */
+            width: clamp(250px, 60vw, 500px); /* Aumentado */
+            margin-bottom: 1rem; /* Aumentado */
             animation: fadeInUp 1s ease-out 0.4s both, pulse 2s infinite ease-in-out;
             position: relative;
             z-index: 4; /* Para garantir que o logo fique na frente do triângulo */
@@ -200,12 +200,12 @@
             top: 45%; /* Um pouco mais para cima */
             left: 50%;
             transform: translate(-50%, -50%);
-            width: clamp(200px, 45vw, 350px); /* Um pouco menor */
-            height: clamp(200px, 45vw, 350px);
+            width: clamp(250px, 55vw, 450px); /* Aumentado */
+            height: clamp(250px, 55vw, 450px);
             filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.8)); /* Sombra menor */
             animation: neon-pulse 3s infinite ease-in-out alternate;
             z-index: 3; /* Para ficar atrás do logo */
-            opacity: 0.2; /* Deixando o triângulo mais transparente */
+            opacity: 0.05; /* Deixando o triângulo mais transparente */
         }
 
         .triangle-bg svg {
@@ -218,11 +218,11 @@
         @keyframes neon-pulse {
             0% {
                 transform: translate(-50%, -50%) rotate(0deg) scale(1) translateY(0);
-                opacity: 0.2;
+                opacity: 0.01;
             }
             100% {
                 transform: translate(-50%, -50%) rotate(360deg) scale(1.1) translateY(-150%);
-                opacity: 0.5;
+                opacity: 0.05;
             }
         }
         @keyframes pulse {
@@ -242,16 +242,16 @@
         }
 
         .hero-subtitle {
-            font-size: clamp(0.9rem, 1.8vw, 1.3rem); /* Diminuído o tamanho da fonte */
+            font-size: clamp(1.2rem, 2.5vw, 1.8rem); /* Aumentado */
             font-weight: 300;
-            margin-bottom: 1.5rem; /* Diminuído o espaçamento */
+            margin-bottom: 2rem; /* Aumentado */
             color: #edd539; /* Cor alterada para o tom de amarelo */
             animation: fadeInUp 1s ease-out 0.6s both;
         }
 
         .hero-cta {
             display: flex;
-            gap: 1rem;
+            gap: 1.5rem; /* Aumentado */
             justify-content: center;
             flex-wrap: wrap;
             animation: fadeInUp 1s ease-out 0.8s both;
@@ -261,11 +261,11 @@
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
-            padding: 1rem 2rem;
+            padding: 1.2rem 2.5rem; /* Aumentado */
             border: none;
             border-radius: 12px;
             font-family: inherit;
-            font-size: 1rem;
+            font-size: 1.1rem; /* Aumentado */
             font-weight: 600;
             cursor: pointer;
             transition: all 0.3s ease;
