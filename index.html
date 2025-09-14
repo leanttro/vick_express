@@ -158,6 +158,7 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
+            font-size: clamp(2rem, 4vw, 3rem);
         }
         
         /* Ajustando as cores do texto para a imagem de fundo */
@@ -241,7 +242,7 @@
         }
 
         .hero-subtitle {
-            font-size: clamp(1rem, 2vw, 1.5rem);
+            font-size: clamp(1.2rem, 2.5vw, 1.8rem);
             font-weight: 300;
             margin-bottom: 1.5rem;
             color: #edd539;
@@ -659,7 +660,7 @@
         /* Testimonials Section */
         #depoimentos {
             background: var(--bg-primary);
-            padding: 5rem 0;
+            padding: 2.5rem 0;
         }
 
         .depoimentos-grid {
@@ -771,31 +772,14 @@
             color: #a0a0b0;
         }
         
-        .contact-link {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 0.5rem;
-            padding: 0.75rem 1.5rem;
-            border-radius: 9999px;
+        /* Estilos para os textos na seção de contato */
+        .contact-info p {
+            font-size: 1.1rem;
             font-weight: 500;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            color: #fff;
-            background-color: #f97316;
             margin-bottom: 0.5rem;
+            color: #fff;
         }
-        
-        .contact-link:hover {
-            opacity: 0.9;
-            transform: translateY(-2px);
-        }
-        .contact-link.instagram {
-            background-color: #E1306C;
-        }
-        .contact-link.whatsapp {
-            background-color: #25D366;
-        }
+
 
         #horario {
             background-color: #fff;
@@ -833,6 +817,34 @@
         }
         .horario-texto strong {
             display: block;
+        }
+
+        /* Botão flutuante do WhatsApp */
+        .whatsapp-float-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 60px;
+            height: 60px;
+            background-color: #128C7E;
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            transition: transform 0.3s ease;
+        }
+        
+        .whatsapp-float-btn:hover {
+            transform: scale(1.1);
+        }
+
+        .whatsapp-float-btn img {
+            width: 30px;
+            height: 30px;
         }
 
         /* Responsive */
@@ -929,16 +941,7 @@
             <div class="hero-badge">Rapidez, Qualidade e Confiança</div>
             <h1 class="hero-title" style="display: none;">Vick Express</h1>
             <p class="hero-subtitle">Sua solução completa para coletas, entregas e serviços postais na região de São Paulo.</p>
-            <div class="hero-cta">
-                <a href="#servicos" class="cta-button cta-primary">
-                    <span>Conheça Nossos Serviços</span>
-                    <span>→</span>
-                </a>
-                <a href="#contato" class="cta-button cta-secondary">
-                    <span>Fale Conosco</span>
-                    <span>💬</span>
-                </a>
-            </div>
+            
         </div>
         <div class="scroll-indicator">
             <span>Role para baixo</span>
@@ -1019,15 +1022,12 @@
                 <div class="depoimentos-list">
                     <div class="depoimento-item">
                         <p class="depoimento-quote">"A entrega foi incrivelmente rápida e o pacote chegou em perfeitas condições. Recomendo a Vick Express para todos!"</p>
-                        <p class="depoimento-author">- Ana Costa</p>
                     </div>
                     <div class="depoimento-item">
                         <p class="depoimento-quote">"Serviço de alta qualidade e com um atendimento impecável. Fui informado de cada passo do processo. Muito satisfeito."</p>
-                        <p class="depoimento-author">- Lucas Almeida</p>
                     </div>
                     <div class="depoimento-item">
                         <p class="depoimento-quote">"Confiança e eficiência definem a Vick Express. Sempre a minha primeira escolha para envios urgentes. Chegou antes do esperado!"</p>
-                        <p class="depoimento-author">- Beatriz Santos</p>
                     </div>
                 </div>
             </div>
@@ -1053,21 +1053,17 @@
             <h3 class="contact-title">Fale com a Vick Express</h3>
             <div class="contact-info">
                 <p>Entre em contato conosco por telefone ou WhatsApp:</p>
-                <a href="https://api.whatsapp.com/send?phone=5511912258888" target="_blank" class="contact-link whatsapp">
-                    <span style="font-size: 1.2rem;">📞</span>
-                    <span>11 91225-8888</span>
-                </a>
-                <a href="https://api.whatsapp.com/send?phone=5511911006995" target="_blank" class="contact-link whatsapp">
-                    <span style="font-size: 1.2rem;">📞</span>
-                    <span>11 91100-6995</span>
-                </a>
-                <a href="https://www.instagram.com/vick.express/" target="_blank" class="contact-link instagram">
-                    <span style="font-size: 1.2rem;">📸</span>
-                    <span>@vick.express no Instagram</span>
-                </a>
+                <p>11 91225-8888</p>
+                <p>11 91105-6995</p>
+                <p>@vick_express no Instagram</p>
             </div>
         </div>
     </div>
+
+    <!-- Botão flutuante do WhatsApp -->
+    <a href="https://wa.me/5511912258888" class="whatsapp-float-btn" target="_blank">
+        <img src="logowpp.png" alt="Logo do WhatsApp">
+    </a>
 
     <script>
         // Toggle mobile navigation
