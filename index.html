@@ -187,7 +187,7 @@
         
         /* Estilo para o logo e animação de pulso */
         .hero-logo {
-            width: clamp(200px, 45vw, 400px); /* Reduzido */
+            width: clamp(250px, 50vw, 450px); /* Aumentado */
             margin-bottom: 0.8rem; /* Reduzido */
             animation: fadeInUp 1s ease-out 0.4s both, pulse 2s infinite ease-in-out;
             position: relative;
@@ -247,6 +247,7 @@
             margin-bottom: 1.5rem; /* Reduzido */
             color: #edd539; /* Cor alterada para o tom de amarelo */
             animation: fadeInUp 1s ease-out 0.6s both;
+            white-space: nowrap;
         }
 
         .hero-cta {
@@ -651,6 +652,59 @@
             background: none;
             -webkit-text-fill-color: initial;
         }
+
+        /* Testimonials Section */
+        #depoimentos {
+            background: var(--bg-primary);
+            padding: 5rem 0;
+        }
+
+        .depoimentos-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .depoimentos-video {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .depoimentos-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .depoimento-item {
+            background: var(--bg-secondary);
+            border-left: 4px solid var(--accent-orange);
+            padding: 1.5rem;
+            border-radius: 8px;
+            position: relative;
+        }
+
+        .depoimento-quote {
+            font-size: 1.1rem;
+            font-style: italic;
+            color: var(--text-secondary);
+            margin-bottom: 0.5rem;
+        }
+
+        .depoimento-author {
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+        
+        @media (max-width: 768px) {
+            .depoimentos-grid {
+                grid-template-columns: 1fr;
+            }
+        }
         
         /* Contato */
         .contact-bar {
@@ -730,7 +784,7 @@
         /* Media query para diminuir o logo em desktop */
         @media (min-width: 769px) {
             .hero-logo {
-                width: 250px; /* Reduzindo o tamanho do logo */
+                width: 300px; /* Aumentando o tamanho do logo */
             }
         }
     </style>
@@ -767,6 +821,7 @@
                 <li><a href="#servicos">Serviços</a></li>
                 <li><a href="#atendimento">Atendimento</a></li>
                 <li><a href="#horario">Horário</a></li>
+                <li><a href="#depoimentos">Depoimentos</a></li>
                 <li><a href="#contato">Contato</a></li>
             </ul>
         </div>
@@ -872,6 +927,38 @@
                         Segunda a Sábado: **7:00h às 22:00h**<br>
                         Domingos e feriados: **Horários combinados**
                     </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="depoimentos">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">O que dizem sobre nós</div>
+                <h2 class="section-title">Depoimentos</h2>
+                <p class="section-description">Veja a experiência de quem confia na Vick Express para suas entregas.</p>
+            </div>
+            <div class="depoimentos-grid">
+                <div class="depoimentos-video">
+                    <video width="100%" controls>
+                        <source src="video.mp4" type="video/mp4">
+                        Seu navegador não suporta o elemento de vídeo.
+                    </video>
+                </div>
+                <div class="depoimentos-list">
+                    <div class="depoimento-item">
+                        <p class="depoimento-quote">"A entrega foi incrivelmente rápida e o pacote chegou em perfeitas condições. Recomendo a Vick Express para todos!"</p>
+                        <p class="depoimento-author">- Ana Costa</p>
+                    </div>
+                    <div class="depoimento-item">
+                        <p class="depoimento-quote">"Serviço de alta qualidade e com um atendimento impecável. Fui informado de cada passo do processo. Muito satisfeito."</p>
+                        <p class="depoimento-author">- Lucas Almeida</p>
+                    </div>
+                    <div class="depoimento-item">
+                        <p class="depoimento-quote">"Confiança e eficiência definem a Vick Express. Sempre a minha primeira escolha para envios urgentes. Chegou antes do esperado!"</p>
+                        <p class="depoimento-author">- Beatriz Santos</p>
+                    </div>
                 </div>
             </div>
         </div>
